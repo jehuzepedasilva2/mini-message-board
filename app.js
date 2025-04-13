@@ -1,5 +1,7 @@
 const express = require('express');
 const path = require('node:path');
+const indexRouter = require('./routes/indexRouter');
+
 require('dotenv').config();
 
 const app = express();
@@ -13,10 +15,7 @@ app.set('view engine', 'ejs');
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
 
-
-app.get('/', (req, res) => {
-  res.render('index');
-});
+app.use('/', indexRouter);
 
 app.listen(process.env.PORT, () => {
   console.log('Server running...');
