@@ -1,0 +1,29 @@
+.form-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: lightgrey;
+}
+
+.form-body > form {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+input, 
+textarea {
+  padding: 4px;
+  margin-bottom: 1rem;
+}
+
+input[type="submit"] {
+  align-self: center;
+  padding: 8px;
+  width: max-content;
+  border: none;
+  background-color: lightcoral;
+  color: white;
+  border-radius: 8px;
+}
