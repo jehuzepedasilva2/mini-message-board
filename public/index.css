@@ -9,13 +9,13 @@
   grid-template-rows: 1fr 10fr 1fr;
   grid-template-areas: 
   "top"
-   "mid"
-   "bot";
+  "mid"
+  "bot";
 
   background-image: url("./images/brown-paper-text-space.png");
-  background-size: cover;       /* or 'contain', or specific px/% values */
-  background-position: center;  /* centers the image */
-  background-repeat: no-repeat; /* prevents tiling */
+  background-size: cover;   
+  background-position: center; 
+  background-repeat: no-repeat;
 }
 
 .index-top, 
@@ -33,6 +33,7 @@
 
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .link-to-new {
@@ -105,7 +106,6 @@
   background: var(--color);
   display:block;
   height:12em;
-  /* width:12em; */
   width: calc((100vw - 3rem - 0.2rem - 0.2rem - 0.2rem) / 4);
   padding:1em;
 
@@ -123,3 +123,46 @@
   transform: scale(1.05);
   z-index: 2;
 }
+
+@media (max-width: 1024px) {
+  .message {
+    width: calc((100vw - 3rem - 0.2rem - 0.2rem - 0.2rem) / 3);
+  }
+}
+
+@media (max-width: 824px) {
+  .message {
+    width: calc((100vw - 3rem - 0.2rem - 0.2rem - 0.2rem) / 2);
+  }
+}
+
+@media (max-width: 780px) {
+  .message {
+    width: calc((100vw - 3rem - 0.2rem - 0.2rem - 0.2rem) / 2);
+  }
+}
+
+@media (max-width: 500px) {
+  
+  .index-top {
+    justify-content: space-between;
+  }
+
+  .index-top-title {
+    font-size: 1.8rem;
+  }
+
+  .index-mid {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+  }
+
+  .message {
+    width: 100%;
+    min-height: 12em;
+  }
+
+}
+
+

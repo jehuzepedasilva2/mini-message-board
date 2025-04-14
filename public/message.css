@@ -67,3 +67,28 @@ h1, h2 {
   box-shadow:10px 10px 7px rgba(0,0,0,.7);
   transform: scale(1.05);
 }
+
+@media (max-width: 1024px) {
+  .message-note {
+    width: 80%;
+  }
+}
+
+@media (max-width: 824px) {
+  .message-note {
+    width: 80%;
+  }
+}
+
+@media (max-width: 780px) {
+  .message-note {
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .message-note{
+    width: 80%;
+  }
+}
