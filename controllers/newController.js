@@ -1,3 +1,5 @@
+const { v4: uuidv4 }  = require('uuid');
+
 const { 
   messages, 
   formatDate,
@@ -11,6 +13,7 @@ function getEJS(req, res) {
 function pushNew(req, res) {
   const d = new Date()
   const newMessage = { 
+    id: uuidv4(),
     text: req.body.userMessage, 
     user:  req.body.userName, 
     added: d, 

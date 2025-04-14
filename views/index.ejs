@@ -18,13 +18,13 @@
   </div>
   <div class="index-mid">
     <% messages.forEach(user => { %>
-      <div class="message" style="--rotation: <%= user.rotation %>; --color: <%= user.color %>;">
+      <a href="/message/<%= user.id %>" class="message" style="--rotation: <%= user.rotation %>; --color: <%= user.color %>;">
         <div class="from-date">
           <p><span>From: </span><%=user.user%></p>
-          <!-- <p><%=user.formattedDate%></p> -->
+          <p><%=user.formattedDate%></p>
         </div>
         <p><%=user.text%></p>
-      </div>
+      </a>
     <% }); %>
   </div>
   <div class="index-bot">

@@ -1,4 +1,5 @@
 .form-body {
+  font-family: 'Lato';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +20,7 @@ textarea {
 }
 
 input[type="submit"] {
+  font-family: 'Lato';
   align-self: center;
   padding: 8px;
   width: max-content;

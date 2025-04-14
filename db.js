@@ -1,10 +1,12 @@
 const messages = [
   {
+    id: 1,
     text: "Hi there!", 
     user: "Amando", 
     added: new Date(),
   }, 
   {
+    id: 2,
     text: "Hello World!", 
     user: "Charles", 
     added: new Date(),
@@ -41,8 +43,14 @@ const formatDate = (d) => {
   return `${day}, ${month} ${ordinal}`; 
 }
 
+const getMessage = (id) => {
+  const msg = messages.find(currMsg => currMsg.id === id);
+  return msg;
+}
+
 module.exports = {
   messages, 
   formatDate,
   assignRotationAndColor,
+  getMessage,
 };

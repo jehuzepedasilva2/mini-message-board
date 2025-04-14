@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('node:path');
 const indexRouter = require('./routes/indexRouter');
 const newRouter = require('./routes/newRouter');
-
+const messageRouter = require('./routes/messageRouter');
 require('dotenv').config();
 
 const app = express();
@@ -21,6 +21,7 @@ app.use(express.static(assetsPath));
 
 app.use('/', indexRouter);
 app.use('/new', newRouter);
+app.use('/message', messageRouter);
 
 app.listen(process.env.PORT, () => {
   console.log('Server running...');
