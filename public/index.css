@@ -11,11 +11,18 @@
   "top"
    "mid"
    "bot";
+
+  background-image: url("./images/brown-paper-text-space.png");
+  background-size: cover;       /* or 'contain', or specific px/% values */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat; /* prevents tiling */
 }
 
 .index-top, 
 .index-bot {
-  background-color: black;
+  font-family: 'Lato';
+  font-weight: bold;
+  background-color: #2f160d;
   color: white;
   padding: 1rem;
   font-size: 2rem;
@@ -23,19 +30,43 @@
 
 .index-top {
   grid-area: top;
-  border-bottom: 5px solid lightblue;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.link-to-new {
+  font-size: 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.link-to-new > a {
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid transparent;
+  transition: 
+    transform 0.15s ease-in, 
+    border 1ms ease-in;
+}
+
+.link-to-new > a:hover {
+  transform: scale(1.1);
+  border-bottom: 1px solid white;
 }
 
 .index-mid {
   grid-area: mid;
   display: flex;
-  flex-direction: column;
-  padding: 0.2rem;
-  gap: 0.5rem;
+  padding: 1rem;
+  gap: 0.2rem;
+
+  flex-wrap: wrap;
+  overflow-y: scroll;
 
   font-size: 1.5rem;
 
-  background-color: lightgrey;
 }
 
 .index-mid p span {
@@ -44,43 +75,46 @@
 
 .index-bot {
   grid-area: bot;
-  border-top: 5px solid lightblue;
 }
 
-.index-top, 
 .index-bot {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-size: 1rem;
 }
 
 .from-date {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-
-  /* border: 1px solid lightblue; */
-  border-radius: 40px;
-
-  /* h-offset v-offset blur spread color |inset|initial|inherit; */
-  box-shadow: 1px 0px 10px 5px rgb(108, 123, 138) inset;
-
 }
 
 .message {
+  font-family: 'Indie Flower';
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  gap: 1rem;
+  text-decoration:none;
+  color:#000;
+  background: var(--color);
+  display:block;
+  height:12em;
+  /* width:12em; */
+  width: calc((100vw - 3rem - 0.2rem - 0.2rem - 0.2rem) / 4);
+  padding:1em;
 
-  padding: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  transform: rotate(var(--rotation));
+  transition: transform 0.2s linear;
+}
 
-  background-color: lightslategrey;
-  color: white;
-  border-radius: 40px;
+.message:hover {
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  transform: scale(1.05);
+  z-index: 2;
 }

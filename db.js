@@ -8,8 +8,16 @@ const messages = [
     text: "Hello World!", 
     user: "Charles", 
     added: new Date(),
-  }
+  },
 ];
+
+const colors = ['#ffc', '#ffe4e1', '#c1f0f6', '#d0f0c0', '#f9f9a3'];
+const rotations = ['-5deg', '-3deg', '1deg', '3deg', '5deg'];
+
+const assignRotationAndColor = (msg) => {
+  msg.color = colors[Math.floor(Math.random() * colors.length)];
+  msg.rotation = rotations[Math.floor(Math.random() * rotations.length)];
+}
 
 const getOrdinal = (n) => {
   if (n > 3 && n < 21) return 'th';
@@ -36,4 +44,5 @@ const formatDate = (d) => {
 module.exports = {
   messages, 
   formatDate,
+  assignRotationAndColor,
 };

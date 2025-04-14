@@ -1,6 +1,7 @@
 const { 
   messages, 
   formatDate,
+  assignRotationAndColor,
 } = require('../db');
 
 function getEJS(req, res) {
@@ -9,14 +10,14 @@ function getEJS(req, res) {
 
 function pushNew(req, res) {
   const d = new Date()
-  messages.push(
-    { 
-      text: req.body.userMessage, 
-      user:  req.body.userName, 
-      added: d, 
-      formattedDate: formatDate(d) 
-    }
-  );
+  const newMessage = { 
+    text: req.body.userMessage, 
+    user:  req.body.userName, 
+    added: d, 
+    formattedDate: formatDate(d) 
+  };
+  assignRotationAndColor(newMessage);
+  messages.push(newMessage);
   res.redirect('/');
 }
 
