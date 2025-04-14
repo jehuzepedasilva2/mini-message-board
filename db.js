@@ -11,42 +11,6 @@ const messages = [
     user: "Charles", 
     added: new Date(),
   },
-  {
-    id: '2',
-    text: "Hello World!", 
-    user: "Charles", 
-    added: new Date(),
-  },
-  {
-    id: '2',
-    text: "Hello World!", 
-    user: "Charles", 
-    added: new Date(),
-  },
-  {
-    id: '2',
-    text: "Hello World!", 
-    user: "Charles", 
-    added: new Date(),
-  },
-  {
-    id: '2',
-    text: "Hello World!", 
-    user: "Charles", 
-    added: new Date(),
-  },
-  {
-    id: '2',
-    text: "Hello World!", 
-    user: "Charles", 
-    added: new Date(),
-  },
-  {
-    id: '2',
-    text: "Hello World!", 
-    user: "Charles", 
-    added: new Date(),
-  },
 ];
 
 const colors = ['#ffc', '#ffe4e1', '#c1f0f6', '#d0f0c0', '#f9f9a3'];
