@@ -3,14 +3,74 @@ const messages = [
     id: '1',
     text: "Hi there!", 
     user: "Amando", 
-    added: new Date(),
+    added: new Date(Date.now() - 24 * 60 * 60 * 1000),
   }, 
   {
     id: '2',
     text: "Hello World!", 
     user: "Charles", 
-    added: new Date(),
+    added: new Date(Date.now() - 24 * 60 * 60 * 1000),
   },
+  {
+    id: "3", 
+    text: "well hello!",
+    user: "Terry",
+    added: new Date(Date.now() - 24 * 60 * 60 * 1000),
+  }, 
+  {
+    id: "4", 
+    text: "this site is pretty cool",
+    user: "Terry",
+    added: new Date(Date.now() - 24 * 60 * 60 * 1000),
+  }, 
+  {
+    id: "5", 
+    text: "will it work, lets try!",
+    user: "Milan",
+    added: new Date(Date.now() - 24 * 60 * 60 * 1000),
+  }, 
+  {
+    id: "6", 
+    text: "very good design!",
+    user: "Snex",
+    added: new Date(Date.now() - 24 * 60 * 60 * 1000),
+  }, 
+  {
+    id: "6", 
+    text: "Nice app!",
+    user: "Terry",
+    added: new Date(),
+  }, 
+  {
+    id: "7", 
+    text: "Does this work, test...", 
+    user: "Jay", 
+    added: new Date(),
+  }, 
+  {
+    id: "8", 
+    text: "amazing", 
+    user: "Sam", 
+    added: new Date(), 
+  }, 
+  {
+    id: "9", 
+    text: "How are you persisting the data, is it using a database ?", 
+    user: "", 
+    added: new Date(),
+  }, 
+  {
+    id: "10", 
+    text: "This should break the UI flow, or else you did a great job. jagijgiheighiehgiehgiehgiehgiheigheighaigiehgiaehigaiignaignjnbanbagjaihgihaehgieighaihihjaiwhiaeighaiegaheighaighihgiehihgngvainbibhinghiehgiaegiheagihiehgiaehgigainbihnbeghiejgieghiahgiewnhgiawhgiginhiuahnbaiohgiahiojdiahihiragjigiiehaighigh.", 
+    user: "Code Breaker", 
+    added: new Date(),
+  }, 
+  {
+    id: "11", 
+    text: "Testing testing....", 
+    user: "Toshi", 
+    added: new Date(),
+  }
 ];
 
 const colors = ['#ffc', '#ffe4e1', '#c1f0f6', '#d0f0c0', '#f9f9a3'];
