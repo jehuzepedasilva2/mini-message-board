@@ -6,7 +6,7 @@
 
 .index-body {
   display: grid;
-  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-rows: max-content 10fr max-content;
   grid-template-areas: 
   "top"
   "mid"

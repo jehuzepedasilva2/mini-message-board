@@ -21,10 +21,22 @@
     <% messages.forEach(user => { %>
       <a href="/message/<%= user.id %>" class="message" style="--rotation: <%= user.rotation %>; --color: <%= user.color %>;">
         <div class="from-date">
-          <p><span>From: </span><%=user.user%></p>
+          <p><span>From: </span>
+            <% if (user.user.length > 7) { %>
+              <%= user.user.substring(0, 5) + '...' %>
+            <% } else { %>
+              <%= user.user %>
+            <% } %>
+          </p>
           <p><%=user.formattedDate%></p>
         </div>
-        <p><%=user.text%></p>
+        <p> 
+          <% if (user.text.length > 140) { %>
+            <%= user.text.substring(0, 140) + '...' %>
+          <% } else { %>
+            <%= user.text %>
+          <% } %>
+        </p>
       </a>
     <% }); %>
   </div>

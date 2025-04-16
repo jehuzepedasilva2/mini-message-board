@@ -62,7 +62,7 @@ const messages = [
   {
     id: "10", 
     text: "This should break the UI flow, or else you did a great job. jagijgiheighiehgiehgiehgiehgiheigheighaigiehgiaehigaiignaignjnbanbagjaihgihaehgieighaihihjaiwhiaeighaiegaheighaighihgiehihgngvainbibhinghiehgiaegiheagihiehgiaehgigainbihnbeghiejgieghiahgiewnhgiawhgiginhiuahnbaiohgiahiojdiahihiragjigiiehaighigh.", 
-    user: "Code Breaker", 
+    user: "Code  Breaker", 
     added: new Date(),
   }, 
   {
